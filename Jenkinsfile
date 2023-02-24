@@ -5,11 +5,10 @@ node {
             checkout scm    
       }     
       stage('Build image') {         
-            app = docker.build("revelino25/py311testing")    
+            app = docker.build("revelino25\py311testing")    
        }     
       stage('Test image') {           
             app.inside {            
-             
              sh 'echo "Tests passed"'        
             }    
         }     
