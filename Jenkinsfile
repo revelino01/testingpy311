@@ -1,11 +1,10 @@
-node {    
+python {    
       def app     
       stage('Clone repository') {               
              
             checkout scm    
       }     
       stage('Build image') {         
-       
             app = docker.build("revelino25/py311testing")    
        }     
       stage('Test image') {           
